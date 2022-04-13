@@ -3,12 +3,11 @@
  *
  *  Created: 12/04/2022 16:59:05
  *   Author: Aluno
- */ 
+ */
 
 	ldi R16, 0b00111111
 	out DDRB, R16
 
-	
 
 main:
 	on:
