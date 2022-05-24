@@ -1,11 +1,11 @@
 #include "asf.h"
 
 void randomize(unsigned char (*bolsonaro)[2][4][8], unsigned char (*lula)[2][4][8]){
-    int fat_random = 2;
-
-
+    //TEM QUE FAZER
 }
 
+
+//ISSO ERA PRA COMPARAR AS MATRIZES MAS NãO Tá FUNFANDO
 int compara_matriz(unsigned char (*bolsonaro)[2][4][8], unsigned char (*lula)[2][4][8]){
     int res = 1; 
 
@@ -27,6 +27,11 @@ int compara_matriz(unsigned char (*bolsonaro)[2][4][8], unsigned char (*lula)[2]
 void copy_pasta(int *pos_cursor, int *pos_copy, int *flag_copy, unsigned char (*lula)[2][4][8], int *con_mov){
     if(*flag_copy == 0){*pos_copy = *pos_cursor; *flag_copy = 1; return;} // COPIA POSIÇÃO DO CURSOR
 
+//======================================//
+//1 - COPIA POSIÇãO Já MARCADA PARA TEMP//
+//2 - COPIA POSIÇãO ATUAL PARA A MARCADA//
+//3 - COPIA POSIÇãO DA TEMP PARA A ATUAL//
+//======================================//
     unsigned char temp[8];
     if(*flag_copy == 1){
         for(int i=0 ; i <8 ; i++){

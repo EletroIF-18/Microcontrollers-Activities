@@ -199,7 +199,7 @@ int main(){
 // ESSA PARTE IRÁ REPETIR ATÉ O JOGADOR ACERTAR A ORDEM OU ACABAR O TEMPO//
 //=======================================================================//
 	while (1){
-		if(!tst_bit(PINC, 0)){
+		if(!tst_bit(PINC, 0)){ // ALTERA A POSIÇãO DO CURSOR, ATé QUE é BEM EFICIENTE PELO VISTO
 			pos_cursor++;
 			if(pos_cursor >= 8){pos_cursor = 0;}
 
@@ -211,7 +211,7 @@ int main(){
 		}
 		cmd_LCD(0x0F, 0);
 
-		if(!tst_bit(PINC, 1)){
+		if(!tst_bit(PINC, 1)){ // NãO SEI PQ MAS TA FUNCIONANDO, NEM MECHE!
 
 			copy_pasta(&pos_cursor, &pos_copy, &flag_copy, &lula, &con_mov);
 
@@ -235,9 +235,10 @@ int main(){
 		}
 
 
-		em_ordem = compara_matriz(&bolsonaro, &lula); //sempre no fim!!
 
-		if(em_ordem == 1){
+		em_ordem = compara_matriz(&bolsonaro, &lula); // SLA MAS NãO ESTá FUNCIONANDO
+
+		if(em_ordem == 1){         // NãO ESTá FUNCIONANDO
 			clear_disp();
 			set_cursor(1,1); escreve_LCD("Fim de jogo");
 			set_cursor(1,2); escreve_LCD("Voce venceu");
